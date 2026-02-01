@@ -3,7 +3,7 @@
 	public enum ColorType
 	{
 		White,
-		Gray,
+		Grey,
 		Black,
 		Red,
 		Green,
@@ -14,6 +14,7 @@
 		LightGreen,
 		PaleBlue,
 		PaleGreen,
-		DarkGray,
+		DarkGrey,
+		PalePurple,
 	}
 }

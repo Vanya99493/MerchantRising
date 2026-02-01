@@ -35,7 +35,7 @@ namespace StudyProject.Editor.Hierarchy
             int dashCount = match.Groups[1].Value.Length;
             string title = match.Groups[2].Value;
 
-            EditorGUI.DrawRect(rect, DictionariesContainer.Colors[ColorType.DarkGray]);
+            EditorGUI.DrawRect(rect, CollectionsContainer.RGBColors[ColorType.DarkGrey]);
 
             EditorGUI.LabelField(rect, GUIContent.none);
 
@@ -61,12 +61,12 @@ namespace StudyProject.Editor.Hierarchy
         {
             return count switch
             {
-                3 => DictionariesContainer.Colors[ColorType.PaleBlue],
-                4 => DictionariesContainer.Colors[ColorType.PaleGreen],
-                5 => DictionariesContainer.Colors[ColorType.Orange],
-                6 => DictionariesContainer.Colors[ColorType.LightGreen],
-                >= 7 => DictionariesContainer.Colors[ColorType.Purple],
-                _ => DictionariesContainer.Colors[ColorType.White]
+                3 => CollectionsContainer.RGBColors[ColorType.PaleBlue],
+                4 => CollectionsContainer.RGBColors[ColorType.PaleGreen],
+                5 => CollectionsContainer.RGBColors[ColorType.Orange],
+                6 => CollectionsContainer.RGBColors[ColorType.LightGreen],
+                >= 7 => CollectionsContainer.RGBColors[ColorType.PalePurple],
+                _ => CollectionsContainer.RGBColors[ColorType.White]
             };
         }
 	}

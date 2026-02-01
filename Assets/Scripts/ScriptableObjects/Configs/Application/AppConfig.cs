@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace StudyProject.ScriptsbleObjects.Application
+namespace StudyProject.ScriptableObjects.Application
 {
 	[CreateAssetMenu(fileName = "AppConfig", menuName = "Scriptable Objects/Application/App Config")]
 	public class AppConfig : ScriptableObject
