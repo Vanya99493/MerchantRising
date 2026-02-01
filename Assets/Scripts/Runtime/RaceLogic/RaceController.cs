@@ -88,8 +88,6 @@ namespace StudyProject.RaceLogic
 
 				yield return new WaitForSeconds(_raceDataAsset.UpdateSpeedDelay);
 			}
-
-			FinishRace();
 		}
 
 		private void CreateNewRacer(int racerPosition)
@@ -109,6 +107,7 @@ namespace StudyProject.RaceLogic
 			if (_finishedRacers.Count >= _activeRacers.Count)
 			{
 				_isRaceRunning = false;
+				FinishRace();
 			}
 		}
 

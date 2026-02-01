@@ -379,8 +379,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::StudyProject.RaceLogic.RaceCameraController
   _camera: {fileID: 330585545}
   _raceDirectionType: 1
-  _startPosition: {x: 10, y: 7, z: -45}
-  _finishPosition: {x: 10, y: 7, z: 45}
+  _startPosition: {x: 7, y: 5, z: -45}
+  _finishPosition: {x: 7, y: 5, z: 45}
   _maximalGap: 5
 --- !u!1 &271554350
 GameObject:
@@ -659,7 +659,7 @@ Transform:
   m_GameObject: {fileID: 330585543}
   serializedVersion: 2
   m_LocalRotation: {x: 0.18301274, y: -0.6830127, z: 0.18301274, w: 0.6830127}
-  m_LocalPosition: {x: 10, y: 7, z: -45}
+  m_LocalPosition: {x: 7, y: 5, z: -45}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -864,7 +864,7 @@ Transform:
   m_GameObject: {fileID: 442206521}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -5, y: 0.001, z: 0}
+  m_LocalPosition: {x: -3.75, y: 0.001, z: 0}
   m_LocalScale: {x: 0.02, y: 1, z: 10}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1056,7 +1056,7 @@ Transform:
   m_GameObject: {fileID: 532342874}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1, y: 0.001, z: 0}
+  m_LocalPosition: {x: 0.75, y: 0.001, z: 0}
   m_LocalScale: {x: 0.02, y: 1, z: 10}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1259,7 +1259,7 @@ Transform:
   m_GameObject: {fileID: 592881409}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3, y: 0.001, z: 0}
+  m_LocalPosition: {x: -2.25, y: 0.001, z: 0}
   m_LocalScale: {x: 0.02, y: 1, z: 10}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1486,7 +1486,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0.0015, z: -48}
-  m_LocalScale: {x: 1, y: 1, z: 0.04}
+  m_LocalScale: {x: 0.75, y: 1, z: 0.04}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1795335510}
@@ -1772,7 +1772,7 @@ Transform:
   m_GameObject: {fileID: 717385436}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3, y: 0.001, z: 0}
+  m_LocalPosition: {x: 2.25, y: 0.001, z: 0}
   m_LocalScale: {x: 0.02, y: 1, z: 10}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2238,7 +2238,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 10}
+  m_LocalScale: {x: 0.75, y: 1, z: 10}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1795335510}
@@ -2547,6 +2547,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::StudyProject.RaceLogic.RacersFactory
   _racerBasePrefab: {fileID: 3730823740180597147, guid: 4896726e0d06a844e89de9c244e9d1f8, type: 3}
+  _racersParentTransform: {fileID: 1118343090}
 --- !u!4 &1118343090
 Transform:
   m_ObjectHideFlags: 0
@@ -2590,7 +2591,7 @@ Transform:
   m_GameObject: {fileID: 1119632836}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1, y: 0.001, z: 0}
+  m_LocalPosition: {x: -0.75, y: 0.001, z: 0}
   m_LocalScale: {x: 0.02, y: 1, z: 10}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2703,7 +2704,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0.0015, z: 48}
-  m_LocalScale: {x: 1, y: 1, z: 0.04}
+  m_LocalScale: {x: 0.75, y: 1, z: 0.04}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 329006490}
@@ -3244,7 +3245,7 @@ Transform:
   m_GameObject: {fileID: 1427083492}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4, y: 0, z: 0}
+  m_LocalPosition: {x: 3, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3275,7 +3276,7 @@ Transform:
   m_GameObject: {fileID: 1454504891}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2, y: 0, z: 0}
+  m_LocalPosition: {x: 1.5, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3458,7 +3459,7 @@ Transform:
   m_GameObject: {fileID: 1544484043}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2, y: 0, z: 0}
+  m_LocalPosition: {x: -1.5, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3489,7 +3490,7 @@ Transform:
   m_GameObject: {fileID: 1553724629}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4, y: 0, z: 0}
+  m_LocalPosition: {x: -3, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4242,7 +4243,7 @@ Transform:
   m_GameObject: {fileID: 2130952459}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 5, y: 0.001, z: 0}
+  m_LocalPosition: {x: 3.75, y: 0.001, z: 0}
   m_LocalScale: {x: 0.02, y: 1, z: 10}
   m_ConstrainProportionsScale: 0
   m_Children: []

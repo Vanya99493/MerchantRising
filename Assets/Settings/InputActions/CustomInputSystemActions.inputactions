@@ -1,0 +1,35 @@
+{
+    "version": 1,
+    "name": "CustomInputSystemActions",
+    "maps": [
+        {
+            "name": "Main",
+            "id": "c58048da-c474-4a67-85d2-5e6bc36c0614",
+            "actions": [
+                {
+                    "name": "Perform",
+                    "type": "Button",
+                    "id": "2aeaff92-a842-4cb0-8be1-cb77b91c5835",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "8df7ddbe-4bfc-4408-b63b-ab4787d203b2",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Perform",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
