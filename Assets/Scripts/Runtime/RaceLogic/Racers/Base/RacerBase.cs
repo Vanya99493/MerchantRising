@@ -1,4 +1,5 @@
 ﻿using System;
+using StudyProject.Interfaces;
 using UnityEngine;
 
 namespace StudyProject.RaceLogic
