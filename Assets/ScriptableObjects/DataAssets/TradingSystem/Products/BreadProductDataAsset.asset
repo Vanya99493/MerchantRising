@@ -15,7 +15,7 @@ MonoBehaviour:
   <Icon>k__BackingField: {fileID: 21300000, guid: 7242f79dabd09a4408204d95844fadc6, type: 3}
   <Name>k__BackingField: "\u0425\u043B\u0456\u0431"
   <Needs>k__BackingField: 100
-  <Production>k__BackingField: 70
-  <Import>k__BackingField: 60
+  <Production>k__BackingField: 60
+  <Import>k__BackingField: 50
   <BasicPrice>k__BackingField: 10
   <AdjustedPrice>k__BackingField: 10
