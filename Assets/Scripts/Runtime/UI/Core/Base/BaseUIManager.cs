@@ -2,8 +2,11 @@
 
 namespace StudyProject.UI
 {
-	public class BaseUIManager : MonoBehaviour
+	public abstract class BaseUIManager : MonoBehaviour
 	{
+		//[SerializeField]
+		//private PopupsManager _popupsManager;
 		
+		public abstract void CloseAllPanels();
 	}
 }

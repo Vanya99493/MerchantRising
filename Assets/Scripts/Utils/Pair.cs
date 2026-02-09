@@ -1,5 +1,8 @@
-﻿namespace StudyProject.Utils
+﻿using System;
+
+namespace StudyProject.Utils
 {
+	[Serializable]
 	public class Pair<T, K>
 	{
 		public T FirstValue;

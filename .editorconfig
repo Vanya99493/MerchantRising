@@ -1,0 +1,5 @@
+root = true
+
+[*.cs]
+csharp_preserve_single_line_statements = true
+resharper_wrap_attributes = false

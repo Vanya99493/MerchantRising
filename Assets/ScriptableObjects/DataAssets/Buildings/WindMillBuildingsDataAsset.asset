@@ -1,0 +1,56 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dde96fc673344f87aa030b6d97217d46, type: 3}
+  m_Name: WindMillBuildingsDataAsset
+  m_EditorClassIdentifier: Assembly-CSharp::StudyProject.ScriptableObjects.BuildingsData.BuildingDataAsset
+  BuildingData:
+    Name: "\u041C\u043B\u0438\u043D"
+    Level: 1
+    BuildingType: 0
+    WorkersData:
+    - Name: "\u0421\u0435\u043B\u044F\u043D\u0438\u043D"
+      WorkerType: 0
+      Icon: {fileID: 21300000, guid: c0a796c70ee847940909c052fdcb877e, type: 3}
+      WorkerMaintence: 2
+      WorkerProduction: 2
+    UpgradesData:
+      UpgradeLevelsData:
+      - Level: 1
+        UpgradeToNextLevelCost: 200
+        BasicProduction: 5
+        AvailableWorkers:
+        - WorkerType: 0
+          AwailableWorkersCount: 2
+      - Level: 2
+        UpgradeToNextLevelCost: 400
+        BasicProduction: 7
+        AvailableWorkers:
+        - WorkerType: 0
+          AwailableWorkersCount: 3
+      - Level: 3
+        UpgradeToNextLevelCost: 600
+        BasicProduction: 9
+        AvailableWorkers:
+        - WorkerType: 0
+          AwailableWorkersCount: 4
+      - Level: 4
+        UpgradeToNextLevelCost: 800
+        BasicProduction: 12
+        AvailableWorkers:
+        - WorkerType: 0
+          AwailableWorkersCount: 5
+      - Level: 5
+        UpgradeToNextLevelCost: 1000
+        BasicProduction: 15
+        AvailableWorkers:
+        - WorkerType: 0
+          AwailableWorkersCount: 6

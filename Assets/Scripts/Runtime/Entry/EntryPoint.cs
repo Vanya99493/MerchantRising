@@ -10,7 +10,7 @@ namespace StudyProject.Entry
 		private RaceController _raceController;
 
 		[SerializeField]
-		private ExperienceUIManager _uiManager;
+		private RacingUIManager _uiManager;
 
 		public void Awake()
 		{
