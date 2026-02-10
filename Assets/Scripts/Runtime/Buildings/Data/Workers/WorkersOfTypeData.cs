@@ -3,9 +3,9 @@
 namespace StudyProject.BuildingLogic
 {
 	[Serializable]
-	public class AvailableWorkers
+	public class WorkersOfTypeData
 	{
 		public WorkerType WorkerType;
-		public int AwailableWorkersCount;
+		public int WorkersCount;
 	}
 }

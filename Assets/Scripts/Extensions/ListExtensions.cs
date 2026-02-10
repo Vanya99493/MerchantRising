@@ -42,5 +42,10 @@ namespace StudyProject.Extensions
 
 			return newList;
 		}
+
+		public static T Last<T>(this List<T> list)
+		{
+			return list[^1];
+		}
 	}
 }

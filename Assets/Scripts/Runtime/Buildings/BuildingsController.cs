@@ -1,4 +1,6 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
+using StudyProject.ScriptableObjects.BuildingsData;
 using StudyProject.ServiceLocatorScripts;
 using StudyProject.UI;
 using StudyProject.UI.BuildingControlPanelScripts;
@@ -14,12 +16,17 @@ namespace StudyProject.BuildingLogic
 		private List<ArtisanInteractableBuilding> _artisanBuildings = new();
 		private IBuildingControlPanel _buildingControlPanel;
 
-		public void Initialize(List<BuildingData> buildingsData)
+		private BuildingsCollectionDataAsset _buildingsCollectionDataAsset;
+
+		public void Initialize(List<BuildingData> buildingsData, BuildingsCollectionDataAsset buildingsCollectionDataAsset)
 		{
+			_buildingsCollectionDataAsset = buildingsCollectionDataAsset;
+			
 			foreach (var buildingData in buildingsData)
 			{
 				var artisanBuilding = _artisanBuildingsFactory.CreateArtisanBuilding(buildingData.BuildingType);
-				artisanBuilding.Initialize(buildingData);
+				//TODO: change structure of artisan building initialization to avoid searching needed building data asset every iteration of loop
+				artisanBuilding.Initialize(buildingData, _buildingsCollectionDataAsset.BuildingDataAssets.FirstOrDefault(x => x.BuildingType == buildingData.BuildingType)); 
 				artisanBuilding.SelectEvent += OnBuildingSelectedEventHandler;
 				_artisanBuildings.Add(artisanBuilding);
 			}

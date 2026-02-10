@@ -10,47 +10,52 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dde96fc673344f87aa030b6d97217d46, type: 3}
-  m_Name: WindMillBuildingsDataAsset
+  m_Name: WindmillBuildingsDataAsset
   m_EditorClassIdentifier: Assembly-CSharp::StudyProject.ScriptableObjects.BuildingsData.BuildingDataAsset
-  BuildingData:
-    Name: "\u041C\u043B\u0438\u043D"
-    Level: 1
-    BuildingType: 0
-    WorkersData:
-    - Name: "\u0421\u0435\u043B\u044F\u043D\u0438\u043D"
-      WorkerType: 0
-      Icon: {fileID: 21300000, guid: c0a796c70ee847940909c052fdcb877e, type: 3}
-      WorkerMaintence: 2
-      WorkerProduction: 2
-    UpgradesData:
-      UpgradeLevelsData:
-      - Level: 1
-        UpgradeToNextLevelCost: 200
-        BasicProduction: 5
-        AvailableWorkers:
-        - WorkerType: 0
-          AwailableWorkersCount: 2
-      - Level: 2
-        UpgradeToNextLevelCost: 400
-        BasicProduction: 7
-        AvailableWorkers:
-        - WorkerType: 0
-          AwailableWorkersCount: 3
-      - Level: 3
-        UpgradeToNextLevelCost: 600
-        BasicProduction: 9
-        AvailableWorkers:
-        - WorkerType: 0
-          AwailableWorkersCount: 4
-      - Level: 4
-        UpgradeToNextLevelCost: 800
-        BasicProduction: 12
-        AvailableWorkers:
-        - WorkerType: 0
-          AwailableWorkersCount: 5
-      - Level: 5
-        UpgradeToNextLevelCost: 1000
-        BasicProduction: 15
-        AvailableWorkers:
-        - WorkerType: 0
-          AwailableWorkersCount: 6
+  Name: "\u041C\u043B\u0438\u043D"
+  BuildingType: 0
+  WorkersData:
+  - Name: "\u0421\u0435\u043B\u044F\u043D\u043A\u0430"
+    WorkerType: 0
+    Icon: {fileID: 21300000, guid: 2a56930c81b639a449e2e377d36209e3, type: 3}
+    WorkerMaintenance: 10
+    WorkerProduction: 2
+  - Name: "\u0421\u0435\u043B\u044F\u043D\u0438\u043D"
+    WorkerType: 1
+    Icon: {fileID: 21300000, guid: c0a796c70ee847940909c052fdcb877e, type: 3}
+    WorkerMaintenance: 20
+    WorkerProduction: 5
+  UpgradesData:
+    UpgradeLevelsData:
+    - Level: 1
+      UpgradeToNextLevelCost: 200
+      BasicProduction: 5
+      AvailableWorkers:
+      - WorkerType: 0
+        WorkersCount: 2
+      - WorkerType: 1
+        WorkersCount: 0
+    - Level: 2
+      UpgradeToNextLevelCost: 400
+      BasicProduction: 8
+      AvailableWorkers:
+      - WorkerType: 0
+        WorkersCount: 3
+      - WorkerType: 1
+        WorkersCount: 1
+    - Level: 3
+      UpgradeToNextLevelCost: 600
+      BasicProduction: 11
+      AvailableWorkers:
+      - WorkerType: 0
+        WorkersCount: 4
+      - WorkerType: 1
+        WorkersCount: 2
+    - Level: 4
+      UpgradeToNextLevelCost: 800
+      BasicProduction: 14
+      AvailableWorkers:
+      - WorkerType: 0
+        WorkersCount: 5
+      - WorkerType: 1
+        WorkersCount: 3

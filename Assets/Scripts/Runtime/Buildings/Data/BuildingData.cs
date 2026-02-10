@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using StudyProject.BuildingLogic.Workers;
 
 namespace StudyProject.BuildingLogic
 {
@@ -8,9 +7,9 @@ namespace StudyProject.BuildingLogic
 	public class BuildingData
 	{
 		public string Name = "";
-		public int Level;
 		public BuildingType BuildingType;
-		public List<WorkerData> WorkersData = new();
-		public UpgradesData UpgradesData;
+		public int CurrentLevel;
+		public int Storage;
+		public List<WorkersOfTypeData> WorkersNumberData = new();
 	}
 }

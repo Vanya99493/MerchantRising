@@ -9,6 +9,6 @@ namespace StudyProject.BuildingLogic
 		public int Level;
 		public int UpgradeToNextLevelCost;
 		public int BasicProduction;
-		public List<AvailableWorkers> AvailableWorkers = new();
+		public List<WorkersOfTypeData> AvailableWorkers = new();
 	}
 }

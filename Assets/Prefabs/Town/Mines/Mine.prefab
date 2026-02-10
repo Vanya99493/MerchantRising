@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2818826674735003259}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41,7 +41,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 893502372238184426}
-  m_Layer: 0
+  - component: {fileID: 2504881916379542432}
+  - component: {fileID: 4146342664882678616}
+  - component: {fileID: 4800451412927847904}
+  - component: {fileID: 2474173093452579432}
+  m_Layer: 8
   m_Name: Mine
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -64,6 +68,76 @@ Transform:
   - {fileID: 2818826674735003259}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &2504881916379542432
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3227826811130996384}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 5.556408, y: 3.5791516, z: 3.0470123}
+  m_Center: {x: -0.4789524, y: 1.7895758, z: -1.0997009}
+--- !u!65 &4146342664882678616
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3227826811130996384}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.4927254, y: 3.5062215, z: 2.2606392}
+  m_Center: {x: -0.28349113, y: 1.7531108, z: 1.558094}
+--- !u!114 &4800451412927847904
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3227826811130996384}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75c460d1845642c0be9b81147e7d5598, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::StudyProject.BuildingLogic.ArtisanInteractableBuilding
+  _interactionController: {fileID: 2474173093452579432}
+--- !u!114 &2474173093452579432
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3227826811130996384}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 142bafc9f8a84603bc6699b442e8a1a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::StudyProject.BuildingLogic.InteractionController
+  _modelGameObjects:
+  - {fileID: 4860873948027536311}
+  _outlineDataAsset: {fileID: 11400000, guid: 2b5186db443d38a43a69c9ddcf271542, type: 2}
 --- !u!1001 &4860873948027438359
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -75,6 +149,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 53bcbe80f2d2a0b43987b394e46d45b2, type: 3}
       propertyPath: m_Name
       value: mine
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 53bcbe80f2d2a0b43987b394e46d45b2, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 53bcbe80f2d2a0b43987b394e46d45b2, type: 3}
       propertyPath: m_LocalScale.x
@@ -133,6 +211,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 53bcbe80f2d2a0b43987b394e46d45b2, type: 3}
+--- !u!1 &4860873948027536311 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100000, guid: 53bcbe80f2d2a0b43987b394e46d45b2, type: 3}
+  m_PrefabInstance: {fileID: 4860873948027438359}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &4860873948027838359 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 53bcbe80f2d2a0b43987b394e46d45b2, type: 3}

@@ -8,5 +8,6 @@
 		Smith,
 		Ironworks,
 		Slaughterhouse,
+		Sawmill,
 	}
 }

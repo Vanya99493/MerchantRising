@@ -1,5 +1,5 @@
 ﻿using System;
-using UnityEngine;
+using System.Collections.Generic;
 
 namespace StudyProject.BuildingLogic
 {
@@ -8,11 +8,9 @@ namespace StudyProject.BuildingLogic
 	{
 		public string Name = "";
 		public int Level;
-		public int WorkersSet;
-		public int AvailableWorkers;
 		public int NextLevel;
-		public int NextLevelAvailableWorkers;
-		public Sprite WorkerIcon;
+		public int UpgradeToNextLevelCost;
+		public List<BuildingPanelWorkersOfTypeData> WorkersTypeData = new();
 
 		public int BasicProduction;
 		public int WorkersProduction;

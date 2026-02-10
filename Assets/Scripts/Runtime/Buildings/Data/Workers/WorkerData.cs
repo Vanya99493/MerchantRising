@@ -9,7 +9,7 @@ namespace StudyProject.BuildingLogic.Workers
 		public string Name = "";
 		public WorkerType WorkerType;
 		public Sprite Icon;
-		public int WorkerMaintence;
+		public int WorkerMaintenance;
 		public int WorkerProduction;
 	}
 }

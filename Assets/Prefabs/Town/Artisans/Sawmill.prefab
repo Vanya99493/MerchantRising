@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5766455879944150479}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41,7 +41,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4725224848516864420}
-  m_Layer: 0
+  - component: {fileID: 4950968876975442519}
+  - component: {fileID: 7144830408439929559}
+  - component: {fileID: 2728097948921241663}
+  - component: {fileID: 4242383552731050739}
+  m_Layer: 8
   m_Name: Sawmill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -64,6 +68,76 @@ Transform:
   - {fileID: 5766455879944150479}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &4950968876975442519
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7997618242575030114}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 3.7968369, y: 3.440309, z: 5.080876}
+  m_Center: {x: -0.6246872, y: 1.7201545, z: -1.182162}
+--- !u!65 &7144830408439929559
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7997618242575030114}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.9921017, y: 1, z: 3.0702553}
+  m_Center: {x: 2.7689638, y: 0.5, z: -2.2015176}
+--- !u!114 &2728097948921241663
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7997618242575030114}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75c460d1845642c0be9b81147e7d5598, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::StudyProject.BuildingLogic.ArtisanInteractableBuilding
+  _interactionController: {fileID: 4242383552731050739}
+--- !u!114 &4242383552731050739
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7997618242575030114}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 142bafc9f8a84603bc6699b442e8a1a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::StudyProject.BuildingLogic.InteractionController
+  _modelGameObjects:
+  - {fileID: 7236115670644446766}
+  _outlineDataAsset: {fileID: 11400000, guid: 2b5186db443d38a43a69c9ddcf271542, type: 2}
 --- !u!1001 &7236115670644543630
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -75,6 +149,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 7173c2ccddc9b8b45b46f613abf5018c, type: 3}
       propertyPath: m_Name
       value: sawmill
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 7173c2ccddc9b8b45b46f613abf5018c, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 7173c2ccddc9b8b45b46f613abf5018c, type: 3}
       propertyPath: m_LocalScale.x
@@ -136,5 +214,10 @@ PrefabInstance:
 --- !u!4 &7236115670644148750 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 7173c2ccddc9b8b45b46f613abf5018c, type: 3}
+  m_PrefabInstance: {fileID: 7236115670644543630}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &7236115670644446766 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100000, guid: 7173c2ccddc9b8b45b46f613abf5018c, type: 3}
   m_PrefabInstance: {fileID: 7236115670644543630}
   m_PrefabAsset: {fileID: 0}

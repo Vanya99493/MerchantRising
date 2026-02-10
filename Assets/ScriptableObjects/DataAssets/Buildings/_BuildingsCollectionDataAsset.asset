@@ -13,4 +13,9 @@ MonoBehaviour:
   m_Name: _BuildingsCollectionDataAsset
   m_EditorClassIdentifier: Assembly-CSharp::StudyProject.ScriptableObjects.BuildingsData.BuildingsCollectionDataAsset
   BuildingDataAssets:
+  - {fileID: 11400000, guid: e37a8cc3fa9a7d64995d633e9dee727a, type: 2}
+  - {fileID: 11400000, guid: e4aa087e8fef28b4482fe2529791288e, type: 2}
+  - {fileID: 11400000, guid: 7b8485c785369544386d2ca1d0f3847f, type: 2}
+  - {fileID: 11400000, guid: a0af6401d53074c47a48a17a36d24ff7, type: 2}
+  - {fileID: 11400000, guid: 6c6978ad287b71347b3fc6de163d318e, type: 2}
   - {fileID: 11400000, guid: a86821094ff69a643a139772ec174d69, type: 2}

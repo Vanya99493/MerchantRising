@@ -1,4 +1,5 @@
 ﻿using System;
+using StudyProject.ScriptableObjects.BuildingsData;
 using StudyProject.UI.BuildingControlPanelScripts;
 using UnityEngine;
 
@@ -12,10 +13,12 @@ namespace StudyProject.BuildingLogic
 		public event Action<InteractableBuilding> SelectEvent;
 
 		protected BuildingData _buildingData;
+		protected BuildingDataAsset _buildingDataAsset;
 
-		public virtual void Initialize(BuildingData buildingData)
+		public virtual void Initialize(BuildingData buildingData, BuildingDataAsset buildingDataAsset)
 		{
 			_buildingData = buildingData;
+			_buildingDataAsset = buildingDataAsset;
 		}
 
 		public void Hover()

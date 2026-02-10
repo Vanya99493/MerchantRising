@@ -21,29 +21,19 @@ namespace StudyProject.UI.BuildingControlPanelScripts
 		private TMP_Text _currentLevelText;
 
 		[SerializeField]
-		private TMP_Text _currentWorkersAvailableTetx;
+		private TMP_Text _nextLevelText;
+
+		[SerializeField]
+		private TMP_Text _currentWorkersAvailableText;
+
+		[SerializeField]
+		private TMP_Text _nextLevelWorkersAmountText;
 
 		[SerializeField]
 		private Button _upgradeButton;
 
 		[SerializeField]
-		private TMP_Text _nextLevelText;
-
-		[SerializeField]
-		private TMP_Text _nextWorkersAmountText;
-
-		[Space(10)]
-		[SerializeField]
-		private Image _workerIconImage;
-
-		[SerializeField]
-		private TMP_Text _workersSetText;
-
-		[SerializeField]
-		private Button _decreaseWorkersButton;
-
-		[SerializeField]
-		private Button _increaseWorkersButton;
+		private TMP_Text _upgradeCostText;
 
 		[Space(10)]
 		[SerializeField]
@@ -59,10 +49,14 @@ namespace StudyProject.UI.BuildingControlPanelScripts
 		[SerializeField]
 		private Button _collectButton;
 
+		[Space(20)]
+		[SerializeField]
+		private TypeOfWorkersElementsFactory _typeOfWorkersElementsFactory;
+
 		public event Action CloseEvent;
 		public event Action UpgradeEvent;
-		public event Action DecreaseWorkersEvent;
-		public event Action IncreaseWorkersEvent;
+		public event Action<WorkerType> DecreaseWorkersEvent;
+		public event Action<WorkerType> IncreaseWorkersEvent;
 		public event Action CollectEvent;
 
 		public void Open(BuildingPanelData buildingPanelData)
@@ -71,14 +65,48 @@ namespace StudyProject.UI.BuildingControlPanelScripts
 			
 			_buildingNameText.text = buildingPanelData.Name;
 
-			_currentLevelText.text = buildingPanelData.Level.ToString();
-			_currentWorkersAvailableTetx.text = buildingPanelData.AvailableWorkers.ToString();
+			_currentLevelText.text = $"Рівень {buildingPanelData.Level}";
+			_nextLevelText.text = $"Рівень {buildingPanelData.NextLevel}";
 
-			_nextLevelText.text = buildingPanelData.NextLevel.ToString();
-			_nextWorkersAmountText.text = buildingPanelData.NextLevelAvailableWorkers.ToString();
+			string currentWorkersAvailableString = "";
+			foreach (var buildingPanelWorkersOfTypeData in buildingPanelData.WorkersTypeData)
+			{
+				if (buildingPanelWorkersOfTypeData.MaximalWorkersNumber > 0)
+				{
+					currentWorkersAvailableString += $"{buildingPanelWorkersOfTypeData.Name}: {buildingPanelWorkersOfTypeData.MaximalWorkersNumber}\n";
+				}
+				else
+				{
+					break;
+				}
+			}
+			_currentWorkersAvailableText.text = currentWorkersAvailableString;
 
-			_workerIconImage.sprite = buildingPanelData.WorkerIcon;
-			_workersSetText.text = $"{buildingPanelData.WorkersSet}/{buildingPanelData.AvailableWorkers}";
+			string nextLevelWorkersAvailableString = "";
+			foreach (var buildingPanelWorkersOfTypeData in buildingPanelData.WorkersTypeData)
+			{
+				if (buildingPanelWorkersOfTypeData.NextLevelMaximalWorkersNumber > 0)
+				{
+					nextLevelWorkersAvailableString += $"{buildingPanelWorkersOfTypeData.Name}: {buildingPanelWorkersOfTypeData.NextLevelMaximalWorkersNumber}\n";
+				}
+				else
+				{
+					break;
+				}
+			}
+			_nextLevelWorkersAmountText.text = nextLevelWorkersAvailableString;
+
+			_upgradeCostText.text = buildingPanelData.UpgradeToNextLevelCost.ToString();
+
+			_typeOfWorkersElementsFactory.DestroyAllTypeOfWorkersElements();
+			foreach (var buildingPanelWorkersOfTypeData in buildingPanelData.WorkersTypeData)
+			{
+				if (buildingPanelWorkersOfTypeData.MaximalWorkersNumber > 0)
+				{
+					var typeOfWorkersElement = _typeOfWorkersElementsFactory.InstantiateTypeOfWorkersElement();
+					typeOfWorkersElement.Initialize(buildingPanelWorkersOfTypeData, OnDecreaseWorkersButtonClickedEventHandler, OnIncreaseWorkersButtonClickedEventHandler);
+				}
+			}
 
 			_basicProductionText.text = buildingPanelData.BasicProduction.ToString();
 			_workersProductionText.text = buildingPanelData.WorkersProduction.ToString();
@@ -90,6 +118,8 @@ namespace StudyProject.UI.BuildingControlPanelScripts
 		public override void Close()
 		{
 			base.Close();
+
+			_typeOfWorkersElementsFactory.DestroyAllTypeOfWorkersElements();
 
 			CloseEvent = null;
 			UpgradeEvent = null;
@@ -104,8 +134,7 @@ namespace StudyProject.UI.BuildingControlPanelScripts
 		{
 			_closeButton.onClick.AddListener(OnCloseButtonClickedEventHandler);
 			_upgradeButton.onClick.AddListener(OnUpgradeButtonClickedEventHandler);
-			_decreaseWorkersButton.onClick.AddListener(OnDecreaseWorkersButtonClickedEventHandler);
-			_increaseWorkersButton.onClick.AddListener(OnIncreaseWorkersButtonClickedEventHandler);
+			
 			_collectButton.onClick.AddListener(OnCollectButtonClickedEventHandler);
 		}
 
@@ -113,8 +142,7 @@ namespace StudyProject.UI.BuildingControlPanelScripts
 		{
 			_closeButton.onClick.RemoveListener(OnCloseButtonClickedEventHandler);
 			_upgradeButton.onClick.RemoveListener(OnUpgradeButtonClickedEventHandler);
-			_decreaseWorkersButton.onClick.RemoveListener(OnDecreaseWorkersButtonClickedEventHandler);
-			_increaseWorkersButton.onClick.RemoveListener(OnIncreaseWorkersButtonClickedEventHandler);
+			
 			_collectButton.onClick.RemoveListener(OnCollectButtonClickedEventHandler);
 		}
 
@@ -128,14 +156,14 @@ namespace StudyProject.UI.BuildingControlPanelScripts
 			UpgradeEvent?.Invoke();
 		}
 
-		private void OnDecreaseWorkersButtonClickedEventHandler()
+		private void OnDecreaseWorkersButtonClickedEventHandler(WorkerType workerType)
 		{
-			DecreaseWorkersEvent?.Invoke();
+			DecreaseWorkersEvent?.Invoke(workerType);
 		}
 
-		private void OnIncreaseWorkersButtonClickedEventHandler()
+		private void OnIncreaseWorkersButtonClickedEventHandler(WorkerType workerType)
 		{
-			IncreaseWorkersEvent?.Invoke();
+			IncreaseWorkersEvent?.Invoke(workerType);
 		}
 
 		private void OnCollectButtonClickedEventHandler()
