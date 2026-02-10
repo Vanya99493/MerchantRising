@@ -7,7 +7,7 @@ namespace StudyProject.BuildingLogic
 	public abstract class InteractableBuilding : MonoBehaviour, IInteractable
 	{
 		[SerializeField]
-		private GameObject _gameObject;
+		private InteractionController _interactionController;
 		
 		public event Action<InteractableBuilding> SelectEvent;
 
@@ -20,21 +20,18 @@ namespace StudyProject.BuildingLogic
 
 		public void Hover()
 		{
-			_gameObject.AddComponent<Outline>();
+			_interactionController.Hover();
 		}
 
 		public void UnHover()
 		{
-			if (_gameObject.TryGetComponent(out Outline outline))
-			{
-				Destroy(outline);
-			}
+			_interactionController.UnHover();
 		}
 
 		public virtual void Select()
 		{
 			SelectEvent?.Invoke(this);
-			UnHover();
+			_interactionController.Select();
 		}
 
 		public abstract void SetBuildingPanel(IBuildingControlPanel buildingControlPanel);

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5034269783675237261}
   - component: {fileID: 1209532137529423255}
   - component: {fileID: 3937175078538499869}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fan
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -100,7 +100,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2719895216112208220}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -132,7 +132,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1825020062856387672}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: FanPivot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -164,7 +164,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6762566877065106502}
-  m_Layer: 0
+  - component: {fileID: 1616723798131194324}
+  - component: {fileID: 7934519133128121732}
+  - component: {fileID: 3543828349214090227}
+  m_Layer: 8
   m_Name: Windmill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -187,6 +190,56 @@ Transform:
   - {fileID: 2719895216112208220}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1616723798131194324
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6970661281396945699}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 5.7434464, y: 10.049174, z: 5.576668}
+  m_Center: {x: 0.0019321442, y: 5.024587, z: -0.03753233}
+--- !u!114 &7934519133128121732
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6970661281396945699}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75c460d1845642c0be9b81147e7d5598, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::StudyProject.BuildingLogic.ArtisanInteractableBuilding
+  _interactionController: {fileID: 3543828349214090227}
+--- !u!114 &3543828349214090227
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6970661281396945699}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 142bafc9f8a84603bc6699b442e8a1a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::StudyProject.BuildingLogic.InteractionController
+  _modelGameObjects:
+  - {fileID: 7208390648800909607}
+  - {fileID: 3113836977740936360}
+  _outlineDataAsset: {fileID: 11400000, guid: 2b5186db443d38a43a69c9ddcf271542, type: 2}
 --- !u!1001 &7208390648800944003
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -199,9 +252,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: windmill
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: c784118e8dac13548832e0d70372f14f, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: c784118e8dac13548832e0d70372f14f, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: c784118e8dac13548832e0d70372f14f, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: c784118e8dac13548832e0d70372f14f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -319,3 +380,8 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!1 &7208390648800909607 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100004, guid: c784118e8dac13548832e0d70372f14f, type: 3}
+  m_PrefabInstance: {fileID: 7208390648800944003}
+  m_PrefabAsset: {fileID: 0}

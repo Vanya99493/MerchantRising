@@ -1,6 +1,4 @@
-﻿using StudyProject.PlayerScripts;
-using StudyProject.ServiceLocatorScripts;
-using StudyProject.UI.BuildingControlPanelScripts;
+﻿using StudyProject.UI.BuildingControlPanelScripts;
 
 namespace StudyProject.BuildingLogic
 {

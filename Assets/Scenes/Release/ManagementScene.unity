@@ -1047,11 +1047,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6060831891487219999, guid: 9492bf7b88be16743985fd8a2b582512, type: 3}
   m_PrefabInstance: {fileID: 302915077}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &305609182 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7208390648800909607, guid: db7abe07d90afef46b8287d160c3f32f, type: 3}
-  m_PrefabInstance: {fileID: 569063837}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &383553917
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1774,18 +1769,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2101609601}
     m_Modifications:
-    - target: {fileID: 3113836977740936360, guid: db7abe07d90afef46b8287d160c3f32f, type: 3}
-      propertyPath: m_Layer
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 4318847231274122777, guid: db7abe07d90afef46b8287d160c3f32f, type: 3}
-      propertyPath: m_Layer
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 5634557644741613024, guid: db7abe07d90afef46b8287d160c3f32f, type: 3}
-      propertyPath: m_Layer
-      value: 8
-      objectReference: {fileID: 0}
     - target: {fileID: 6762566877065106502, guid: db7abe07d90afef46b8287d160c3f32f, type: 3}
       propertyPath: m_LocalPosition.x
       value: -28.32
@@ -1830,28 +1813,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Windmill
       objectReference: {fileID: 0}
-    - target: {fileID: 6970661281396945699, guid: db7abe07d90afef46b8287d160c3f32f, type: 3}
-      propertyPath: m_Layer
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 7208390648800909603, guid: db7abe07d90afef46b8287d160c3f32f, type: 3}
-      propertyPath: m_Layer
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 7208390648800909607, guid: db7abe07d90afef46b8287d160c3f32f, type: 3}
-      propertyPath: m_Layer
-      value: 8
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 6970661281396945699, guid: db7abe07d90afef46b8287d160c3f32f, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1847017491}
-    - targetCorrespondingSourceObject: {fileID: 6970661281396945699, guid: db7abe07d90afef46b8287d160c3f32f, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1847017490}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: db7abe07d90afef46b8287d160c3f32f, type: 3}
 --- !u!4 &569063838 stripped
 Transform:
@@ -7220,45 +7185,17 @@ Transform:
   - {fileID: 97615396}
   m_Father: {fileID: 2061390401}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1847017489 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6970661281396945699, guid: db7abe07d90afef46b8287d160c3f32f, type: 3}
+--- !u!114 &1847017490 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7934519133128121732, guid: db7abe07d90afef46b8287d160c3f32f, type: 3}
   m_PrefabInstance: {fileID: 569063837}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1847017490
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1847017489}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 75c460d1845642c0be9b81147e7d5598, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::StudyProject.BuildingLogic.ArtisanInteractableBuilding
-  _gameObject: {fileID: 305609182}
---- !u!65 &1847017491
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1847017489}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 5.7434464, y: 10.049174, z: 5.576668}
-  m_Center: {x: 0.0019321442, y: 5.024587, z: -0.03753233}
 --- !u!1001 &1877772418
 PrefabInstance:
   m_ObjectHideFlags: 0

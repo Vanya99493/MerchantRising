@@ -1,12 +1,11 @@
 ﻿using UnityEngine;
-using System.Collections;
 
-namespace CTI {
-
-    [ExecuteInEditMode]
+namespace CTI 
+{
+	[ExecuteInEditMode]
 	[RequireComponent (typeof (WindZone))]
-	public class CTI_URP_CustomWind : MonoBehaviour {
-
+	public class CTI_URP_CustomWind : MonoBehaviour 
+	{
 		private WindZone m_WindZone;
 
 		private Vector3 WindDirection;
@@ -21,20 +20,24 @@ namespace CTI {
 
         private Transform trans;
 
-        void Init () {
+        private void Init() 
+        {
 			m_WindZone = GetComponent<WindZone>();
             CTIWindPID = Shader.PropertyToID("_CTI_SRP_Wind");
             CTITurbulencedPID = Shader.PropertyToID("_CTI_SRP_Turbulence");
             trans = this.transform;
         }
 
-		void OnValidate () {
-			Update ();
+        private void OnValidate() 
+        {
+			Update();
 		}
 		
-		void Update () {
-			if (!init) {
-				Init ();
+		private void Update() 
+		{
+			if (!init) 
+			{
+				Init();
 			}
 			WindDirection = trans.forward;
 
@@ -45,7 +48,6 @@ namespace CTI {
 
             Shader.SetGlobalVector(CTIWindPID, new Vector4(WindDirection.x, WindDirection.y, WindDirection.z, WindStrength) );
             Shader.SetGlobalFloat(CTITurbulencedPID, WindTurbulence);
-
 		}
 	}
 }
