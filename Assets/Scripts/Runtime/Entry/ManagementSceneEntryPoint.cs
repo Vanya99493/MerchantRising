@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using StudyProject.BuildingLogic;
 using StudyProject.PlayerScripts;
 using StudyProject.ScriptableObjects.BuildingsData;
@@ -53,20 +54,11 @@ namespace StudyProject.Entry
 					BuildingType = buildingDataAsset.BuildingType,
 					CurrentLevel = 1,
 					Storage = 0,
-					//TODO: change workers list creation to check existed workers types for the building
-					WorkersNumberData =  new()
+					WorkersNumberData = buildingDataAsset.WorkersData.Select(x => new WorkersOfTypeData()
 					{
-						new WorkersOfTypeData()
-						{
-							WorkerType = WorkerType.Junior, 
-							WorkersCount = 0,
-						},
-						new WorkersOfTypeData()
-						{
-							WorkerType = WorkerType.Midl,
-							WorkersCount = 0
-						},
-					},
+						WorkerType = x.WorkerType,
+						WorkersCount = 0,
+					}).ToList(),
 				};
 				
 				buildingsData.Add(buildingData);
