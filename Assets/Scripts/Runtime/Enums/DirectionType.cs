@@ -3,6 +3,7 @@
 	public enum DirectionType
 	{
 		oX,
-		oZ
+		oY,
+		oZ,
 	}
 }

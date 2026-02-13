@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using StudyProject.BuildingLogic;
 using StudyProject.PlayerScripts;
 using StudyProject.ServiceLocatorScripts;
@@ -98,15 +99,7 @@ namespace StudyProject.UI.BuildingControlPanelScripts
 
 			_upgradeCostText.text = buildingPanelData.UpgradeToNextLevelCost.ToString();
 
-			_typeOfWorkersElementsFactory.DestroyAllTypeOfWorkersElements();
-			foreach (var buildingPanelWorkersOfTypeData in buildingPanelData.WorkersTypeData)
-			{
-				if (buildingPanelWorkersOfTypeData.MaximalWorkersNumber > 0)
-				{
-					var typeOfWorkersElement = _typeOfWorkersElementsFactory.InstantiateTypeOfWorkersElement();
-					typeOfWorkersElement.Initialize(buildingPanelWorkersOfTypeData, OnDecreaseWorkersButtonClickedEventHandler, OnIncreaseWorkersButtonClickedEventHandler);
-				}
-			}
+			InitializeWorkersElement(buildingPanelData.WorkersTypeData);
 
 			_basicProductionText.text = buildingPanelData.BasicProduction.ToString();
 			_workersProductionText.text = buildingPanelData.WorkersProduction.ToString();
@@ -144,6 +137,19 @@ namespace StudyProject.UI.BuildingControlPanelScripts
 			_upgradeButton.onClick.RemoveListener(OnUpgradeButtonClickedEventHandler);
 			
 			_collectButton.onClick.RemoveListener(OnCollectButtonClickedEventHandler);
+		}
+
+		private void InitializeWorkersElement(List<BuildingPanelWorkersOfTypeData> workersOfTypesData)
+		{
+			_typeOfWorkersElementsFactory.DestroyAllTypeOfWorkersElements();
+			foreach (var buildingPanelWorkersOfTypeData in workersOfTypesData)
+			{
+				if (buildingPanelWorkersOfTypeData.MaximalWorkersNumber > 0)
+				{
+					var typeOfWorkersElement = _typeOfWorkersElementsFactory.InstantiateTypeOfWorkersElement();
+					typeOfWorkersElement.Initialize(buildingPanelWorkersOfTypeData, OnDecreaseWorkersButtonClickedEventHandler, OnIncreaseWorkersButtonClickedEventHandler);
+				}
+			}
 		}
 
 		private void OnCloseButtonClickedEventHandler()

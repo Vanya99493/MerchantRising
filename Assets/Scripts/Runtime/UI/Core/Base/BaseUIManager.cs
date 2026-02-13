@@ -6,6 +6,11 @@ namespace StudyProject.UI
 	{
 		//[SerializeField]
 		//private PopupsManager _popupsManager;
+
+		public virtual void Initialize()
+		{
+			CloseAllPanels();
+		}
 		
 		public abstract void CloseAllPanels();
 	}

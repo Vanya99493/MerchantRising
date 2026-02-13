@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-using System.Linq;
 using StudyProject.BuildingLogic;
 using StudyProject.PlayerScripts;
 using StudyProject.ScriptableObjects.BuildingsData;
@@ -36,7 +35,7 @@ namespace StudyProject.Entry
 			
 			_buildingsController.Initialize(GetBuildingsData(), _buildingsCollectionDataAsset);
 			
-			//_gameUIManager.Initialize();
+			_gameUIManager.Initialize();
 			_gameUIManager.CloseAllPanels();
 			
 			_topViewPlayerController.ActivateSelection();
