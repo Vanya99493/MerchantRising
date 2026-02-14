@@ -9,5 +9,6 @@
 		Ironworks,
 		Slaughterhouse,
 		Sawmill,
+		Winery,
 	}
 }
