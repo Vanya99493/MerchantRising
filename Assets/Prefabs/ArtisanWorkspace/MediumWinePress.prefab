@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1086046837331939029}
   m_Layer: 0
-  m_Name: WinePress
+  m_Name: MediumWinePress
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
