@@ -8,11 +8,11 @@ namespace StudyProject.BuildingLogic
 	public class ArtisanBuildingsFactory : MonoBehaviour
 	{
 		[SerializeField]
-		private List<Pair<BuildingType, ArtisanInteractableBuilding>> _artisanBuildings;
+		private List<Pair<ExtractiveBuildingType, ArtisanInteractableBuilding>> _artisanBuildings;
 
-		public ArtisanInteractableBuilding CreateArtisanBuilding(BuildingType buildingType)
+		public ArtisanInteractableBuilding CreateArtisanBuilding(ExtractiveBuildingType extractiveBuildingType)
 		{
-			return _artisanBuildings.FirstOrDefault(x => x.FirstValue == buildingType)?.SecondValue;
+			return _artisanBuildings.FirstOrDefault(x => x.FirstValue == extractiveBuildingType)?.SecondValue;
 		}
 	}
 }

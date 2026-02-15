@@ -7,7 +7,7 @@ namespace StudyProject.BuildingLogic
 	public class BuildingData
 	{
 		public string Name = "";
-		public BuildingType BuildingType;
+		public ExtractiveBuildingType extractiveBuildingType;
 		public int CurrentLevel;
 		public int Storage;
 		public List<WorkersOfTypeData> WorkersNumberData = new();

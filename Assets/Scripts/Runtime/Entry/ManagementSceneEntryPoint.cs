@@ -51,7 +51,7 @@ namespace StudyProject.Entry
 				BuildingData buildingData = new()
 				{
 					Name = buildingDataAsset.Name,
-					BuildingType = buildingDataAsset.BuildingType,
+					extractiveBuildingType = buildingDataAsset.EtractiveBuildingType,
 					CurrentLevel = 1,
 					Storage = 0,
 					WorkersNumberData = buildingDataAsset.WorkersData.Select(x => new WorkersOfTypeData()

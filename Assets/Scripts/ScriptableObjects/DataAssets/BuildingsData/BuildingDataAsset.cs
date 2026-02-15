@@ -9,7 +9,7 @@ namespace StudyProject.ScriptableObjects.BuildingsData
 	public class BuildingDataAsset : ScriptableObject
 	{
 		public string Name = "";
-		public BuildingType BuildingType;
+		public ExtractiveBuildingType EtractiveBuildingType;
 		public List<WorkerData> WorkersData = new();
 		public UpgradesData UpgradesData;
 	}

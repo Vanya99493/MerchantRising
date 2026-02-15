@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4728297690891000878}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41,7 +41,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1677386822428172471}
-  m_Layer: 0
+  - component: {fileID: 4389990362966253098}
+  - component: {fileID: 8971437735549829345}
+  - component: {fileID: 2904766024156596962}
+  m_Layer: 8
   m_Name: Quarry
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -64,6 +67,55 @@ Transform:
   - {fileID: 4728297690891000878}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &4389990362966253098
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8955384528167162411}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 3.7580564, y: 3.2712815, z: 5.877712}
+  m_Center: {x: 0.85690916, y: 1.6356407, z: -0.09883618}
+--- !u!114 &8971437735549829345
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8955384528167162411}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75c460d1845642c0be9b81147e7d5598, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::StudyProject.BuildingLogic.ArtisanInteractableBuilding
+  _interactionController: {fileID: 2904766024156596962}
+--- !u!114 &2904766024156596962
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8955384528167162411}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 142bafc9f8a84603bc6699b442e8a1a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::StudyProject.BuildingLogic.InteractionController
+  _modelGameObjects:
+  - {fileID: 4105700708198558531}
+  _outlineDataAsset: {fileID: 11400000, guid: 2b5186db443d38a43a69c9ddcf271542, type: 2}
 --- !u!1001 &4105700708198591971
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -75,6 +127,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 0933f6a03cb7a9949b12517e3254da12, type: 3}
       propertyPath: m_Name
       value: quarry
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 0933f6a03cb7a9949b12517e3254da12, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 0933f6a03cb7a9949b12517e3254da12, type: 3}
       propertyPath: m_LocalScale.x
@@ -136,5 +192,10 @@ PrefabInstance:
 --- !u!4 &4105700708198201187 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 0933f6a03cb7a9949b12517e3254da12, type: 3}
+  m_PrefabInstance: {fileID: 4105700708198591971}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &4105700708198558531 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100000, guid: 0933f6a03cb7a9949b12517e3254da12, type: 3}
   m_PrefabInstance: {fileID: 4105700708198591971}
   m_PrefabAsset: {fileID: 0}

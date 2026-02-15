@@ -24,9 +24,9 @@ namespace StudyProject.BuildingLogic
 			
 			foreach (var buildingData in buildingsData)
 			{
-				var artisanBuilding = _artisanBuildingsFactory.CreateArtisanBuilding(buildingData.BuildingType);
+				var artisanBuilding = _artisanBuildingsFactory.CreateArtisanBuilding(buildingData.extractiveBuildingType);
 				//TODO: change structure of artisan building initialization to avoid searching needed building data asset every iteration of loop
-				artisanBuilding.Initialize(buildingData, _buildingsCollectionDataAsset.BuildingDataAssets.FirstOrDefault(x => x.BuildingType == buildingData.BuildingType)); 
+				artisanBuilding.Initialize(buildingData, _buildingsCollectionDataAsset.BuildingDataAssets.FirstOrDefault(x => x.EtractiveBuildingType == buildingData.extractiveBuildingType)); 
 				artisanBuilding.SelectEvent += OnBuildingSelectedEventHandler;
 				_artisanBuildings.Add(artisanBuilding);
 			}
